@@ -72,15 +72,8 @@ def message_to_wav_bytes(message: str) -> bytes:
 
 # ---------- کمک: دریافت لیست کلمات از st.secrets یا fallback ----------
 def get_word_list() -> List[str]:
-    # در Streamlit Cloud: در بخش Secrets یک کلید به نام WORDS اضافه کن با مقدار مثل "SALAM,MOON,HELLO"
-    raw = st.secrets.get("WORDS", None)
-    if raw:
-        # جداکننده و پاک‌سازی
-        words = [w.strip() for w in raw.split(",") if w.strip()]
-        if words:
-            return words
-    # fallback — اگر secrets تنظیم نشده بود از این لیست استفاده می‌کنیم
-    return ["SALAM","HELLO","SKY","MOON","STAR"]
+
+    return ["HAVAFAZA"]
 
 # ---------- UI و منطق بازی ----------
 st.set_page_config(page_title="AeroGame — Morse", layout="centered")
@@ -132,3 +125,4 @@ if st.button("ارسال"):
 
 st.write("---")
 st.caption("نکته: کلمات چالش در Streamlit Secrets ذخیره شده‌اند؛ کد منبع ریپو شامل جواب‌ها نیست.")
+
