@@ -73,7 +73,7 @@ def message_to_wav_bytes(message: str) -> bytes:
 # ---------- کمک: دریافت لیست کلمات از st.secrets یا fallback ----------
 def get_word_list() -> List[str]:
 
-    return ["HAVAFAZA"]
+    return ["AE04"]
 
 # ---------- UI و منطق بازی ----------
 st.set_page_config(page_title="AeroGame — Morse", layout="centered")
@@ -125,4 +125,5 @@ if st.button("ارسال"):
 
 st.write("---")
 st.caption("نکته: کلمات چالش در Streamlit Secrets ذخیره شده‌اند؛ کد منبع ریپو شامل جواب‌ها نیست.")
+
 
